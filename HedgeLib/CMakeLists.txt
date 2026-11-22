@@ -261,7 +261,7 @@ if(NOT TARGET rapidjson)
     )
 endif()
 
-list(APPEND HEDGELIB_PRIVATE_INCLUDE_DIRS RAPIDJSON_INCLUDE_DIR)
+list(APPEND HEDGELIB_PRIVATE_INCLUDE_DIRS ${RAPIDJSON_INCLUDE_DIR})
 
 # Download libmspack and add it to HedgeLib private includes
 message(STATUS "Downloading and/or configuring libmspack as necessary...")

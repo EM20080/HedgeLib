@@ -19,12 +19,11 @@ set_target_properties(HedgeSet PROPERTIES
 
 # Copy templates on post-build on Windows
 if(WIN32)
-message(STATUS ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$<CONFIG>/templates)
     add_custom_command(TARGET HedgeSet
         POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
             ${PROJECT_SOURCE_DIR}/Templates/
-            ${CMAKE_BINARY_DIR}/$<CONFIG>/templates
+            ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/templates
     )
 endif()
 

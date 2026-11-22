@@ -1,7 +1,7 @@
 #ifndef HL_CRI_PACKED_FILE_H_INCLUDED
 #define HL_CRI_PACKED_FILE_H_INCLUDED
 
-#include <ankerl/unordered_dense.h>
+#include <robin_hood.h>
 
 #include "../hl_internal.h"
 #include <rad/rad_stream.h>
@@ -181,7 +181,7 @@ class packed_file
         packed_file_entry
     >;
 
-    using dir_names_set_t_ = ankerl::unordered_dense::set<std::string_view>;
+    using dir_names_set_t_ = robin_hood::unordered_set<std::string_view>;
 
     file_entries_map_t_     fileEntries_;
     dir_names_set_t_        dirNames_;

@@ -126,8 +126,8 @@ $Dependencies += { Install-CMakeProject -Name "zlib" `
 
     # HACK: Get rid of shared zlib libraries so FindZLIB will link it statically on Windows
     Remove-Item -Path $(Join-Path -Path $DependenciesDirectory -ChildPath "bin") -Recurse -Force
-    Remove-Item -Path $(Join-Path -Path $DependenciesDirectory -ChildPath "lib\zlibd.lib") -Force
-    Remove-Item -Path $(Join-Path -Path $DependenciesDirectory -ChildPath "lib\zlib.lib") -Force
+    Remove-Item -Path $(Join-Path -Path $DependenciesDirectory -ChildPath "lib\libzd.lib") -Force
+    Remove-Item -Path $(Join-Path -Path $DependenciesDirectory -ChildPath "lib\libz.lib") -Force
 }
 
 $Dependencies += { Install-CMakeProject -Name "glfw3" `

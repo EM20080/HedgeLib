@@ -90,8 +90,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 # Build HedgeLib
 add_subdirectory(HedgeLib)
 
-# Build HedgeRender if requested or required
-if(HEDGELIB_BUILD_HEDGERENDER OR HEDGELIB_BUILD_HEDGETOOLS)
+# Build HedgeRender if requested pr required
+if(HEDGELIB_BUILD_HEDGERENDER)
     add_subdirectory(HedgeRender)
 endif()
 
